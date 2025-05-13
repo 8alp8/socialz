@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    /* background-color: #79C7C5; */
+    background-color: #9E7B9B;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+.card{
+    text-align: center;
+    
+}
+
+.section{
+    width: 384px;
+    height: 610px;
+    margin-top: 50px;
+    background-color: rgb(31,31,31);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.card img{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  margin: 42px auto 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+}
+
+.img-wrapper:hover {
+  box-shadow: 0 0 20px 8px rgba(173, 216, 230, 0.6);
+  filter: blur(0.2px);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 95px;
+  background-color: rgba(255, 248, 220, 0.7); /* pastel ton */
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.location{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(196, 248, 42);
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.about-me{
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.link-button {
+    width: 305px;
+    height: 45px;
+    margin-bottom: 16px;
+
+    color: white;
+    background-color: rgb(51,51,51);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    text-decoration: none; 
+    transition: 0.1s ease;
+}
+
+.link-button:hover{
+    background-color: rgb(196, 248, 42);
+    color: rgb(51,51,51);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 90%; /* Ekran genişliğine göre esnek genişlik */
+    height: auto;
+    margin-top: 30px;
+  }
+  .link-button {
+    width: 80%; /* Buton genişliği %80 */
+  }
+}
+
+/* Medya Sorgusu - Ekran Genişliği 768px'in Üzerinde, Genişliği %15 Arttırma */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    width: 441.6px; /* %15 artış */
+  }
+}
+
+/* Medya Sorgusu - Daha Küçük Ekranlar İçin */
+@media (max-width: 375px) {
+  .section {
+    width: 100%;
+    padding: 20px;
+  }
+  .link-button {
+    width: 100%;
+    font-size: 12px;
+  }
+  .img-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
